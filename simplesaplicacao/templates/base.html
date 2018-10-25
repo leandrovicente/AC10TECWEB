@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+        {% block title %}
+                <title>AC</title>
+        {% endblock title %}
+        <link href="static/css/home.css" rel="stylesheet">     
+<style>
+       /* INTERFACE DO PROJETO */
+       div#interface{
+        width: 900px;
+        background-color:  #ffffff;
+        margin: -20px auto 0px auto; 
+        box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+        padding: 10px;
+        }
+        /* MENU PRINCIPAL E CABEÇALHO */
+        nav#menu{
+        display: block;
+        }
+        nav#menu ul{
+        list-style: none;
+        text-transform: uppercase;
+        position: absolute;
+        top:-20px;
+        left: 450px;
+        }
+        nav#menu li{
+        display: inline-block;
+        background-color: #dddddd;
+        padding: 10px;
+        margin: 2px;
+        transition: background-color 1s;
+        }
+        nav#menu li:hover{
+        background: #606060
+        }
+        nav#menu h1{
+        display: none;
+        }
+        nav#menu a{
+        color: #000000;
+        text-decoration: none;
+        }
+        nav#menu a:hover{
+        color: #ffffff;
+        text-decoration: underline;
+        }
+        header#cabecalho{
+        margin-top: 50px;
+        border-bottom: 1px #606060 solid;
+        height: 100px;
+        }
+        header#cabecalho h1{
+        font-family: 'FonteLogo', sans-serif;
+        font-size: 30pt;
+        color: #606060;
+        text-shadow: 1px,1px,1px, rgba(0,0,0,.6);
+        padding:0px;
+        margin-bottom: 0px;
+        }
+        header#cabecalho h2{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15pt;
+        color: #888888;
+        margin-top:0px;
+        }
+        /* PAGINA INICAL */
+        div.home h1{
+        font-family: sans-serif;
+        font-size:20pt; 
+        color: rgba(0,0,0,.8);
+       }
+       div.home h2{
+        font-family: sans-serif;
+        font-size:12pt;      
+       }
+     
+
+</style>
+        
+</head>
+<body>
+
+<div id="interface"> 
+        <header id="cabecalho">
+                <hgroup>
+                <h1>AC TECWEB</h1>
+                <h2>AC08, AC09 E AC10</h2>
+                
+                
+                </hgroup>
+        </header>
+        <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul type="disc">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'lista' %}">Cadastro de Aluno</a></li>
+                
+                <li> <a href="multimidia.html">Cadastro de Desciplina</a></li>
+                </ul>
+        </nav>
+
+</header>
+            
+        
+        {% block content %}
+
+        {% endblock content %}
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{%load static%}
+{%static 'css/home.css'%}
+
+{% block content %}
+
+<form>    
+    <fieldset>
+            <legend >Cadastro de Disciplina</legend>
+            <p><label>ID Disciplina</label>
+            <input type="number" size="7" maxlength="7" placeholder="Digite seu ID" required></p>
+            <p><label> Nome Da Disciplina:</label>
+            <input type="text" size="20" maxlength="30" placeholder="Nome da Disciplina" required/></p>
+            <p><label >Quant. Semestre:</label>
+            <input type="number"  size="2" maxlength="2" placeholder="Quantidade de Semestre" requireds/></p>  
+            <p><label> Periodo do Curso:</label>
+                <select name="Periodo">.
+                        <option value="amanha">Matutino</option>
+                        <option value="tarde">Vespertino</option>
+                        <option value="noite">Noturno</option>       
+                </select>
+            <p><label> Docente:</label>
+            <input type="text"  size="30" maxlength="50" placeholder="Digite seu Cargo" required/></p>
+            <label>Conteudo da Disciplina:</label>
+            <textarea cols="35" rows="5" placeholder="Digite o Conteudo da Disciplina" required></textarea>
+            <button>Enviar</button>
+        </fieldset>
+    </form> 
+      
+{% endblock content %}

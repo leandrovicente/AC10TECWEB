@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{%load static%}
+{%static 'css/home.css'%}
+
+{% block content %}
+
+
+<form>
+    <fieldset>
+        <legend >Cadastro de Alunos</legend>
+        <p><label>RA</label>
+        <input type="number" size="7" maxlength="7" placeholder="Digite seu Ra" required></p>
+        <p><label> Nome:</label>
+        <input type="text" size="20" maxlength="30" placeholder="Nome Completo" required/></p>
+        <p><label> Telefone:</label>
+        <input type="text" size="20" maxlength="15" placeholder="Digite seu Telefone" required/></p>
+        <p><label>Endereço:</label>
+        <input type="text" size="20" maxlength="50" placeholder="Digite seu Endereço" required/></p>
+        <p><label for="cEmail"> E-mail:</label>
+        <input type="email" size="20" maxlength="20" placeholder="exemplo@exemplo.com.br" required/></p>
+            <fieldset id="sexo"><legend>Selecione Seu Curso</legend>
+                       <input type="checkbox" name="tSexo" id="cMasc" checked/><label for="cMasc"> Sistemas da informação</label><br>
+                       <input type="checkbox" name="tSexo" id="cFem"/><label for="cFem">Analise e Desenvolvimento de Sistema</label><br>
+                       <input type="checkbox" name="tSexo" id="cFem"/><label for="cFem">Ciências da Computação</label>
+            </fieldset>
+        <button>Enviar</button>    
+    </fieldset>
+</form>       
+
+{% endblock content %}

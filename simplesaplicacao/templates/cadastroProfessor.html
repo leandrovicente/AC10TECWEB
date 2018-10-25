@@ -1,0 +1,29 @@
+s{% extends 'base.html' %}
+
+{%load static%}
+{%static 'css/home.css'%}
+
+{% block content %}
+
+<form>
+    <fieldset>
+            <legend >Cadastro do Professor</legend>
+            <p><label>ID Professor</label>
+            <input type="number" size="7" maxlength="7" placeholder="Digite seu ID" required></p>
+            <p><label> Nome:</label>
+            <input type="text" size="20" maxlength="30" placeholder="Nome Completo" required/></p>
+            <p><label > CPF:</label>
+            <input type="number"  size="11" maxlength="11" placeholder="Digite seu CPF" required/></p>  
+            <p><label> Telefone:</label>
+            <input type="text" size="20" maxlength="15" placeholder="Digite seu Telefone" required/></p>
+            <p><label> E-mail:</label>
+            <input type="email"  size="20" maxlength="20" placeholder="exemplo@exemplo.com.br" required/></p>
+            <p><label> Cargo:</label>
+            <input type="text"  size="20" maxlength="20" placeholder="Digite seu Cargo" required/></p>
+            <button>Enviar</button>    
+        </fieldset>
+    </form>
+
+
+
+{% endblock content %}
